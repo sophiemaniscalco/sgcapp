@@ -147,17 +147,6 @@
                                 <rect key="frame" x="20" y="241" width="369" height="254"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OG8-bc-vQA">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.92752742767333984" green="0.2450161874294281" blue="0.45939451456069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <barButtonItem title="Home" id="r3Y-11-DrG">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.92999178169999996" green="0.37642610069999999" blue="0.6860898137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Supergirls Code     " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ye-io-GTJ">
                                 <rect key="frame" x="20" y="126" width="352" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -196,6 +185,23 @@
                                     <segue destination="vqL-6p-fBB" kind="show" id="CIn-UQ-pTT"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OG8-bc-vQA">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.92752742767333984" green="0.2450161874294281" blue="0.45939451456069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="Home" id="r3Y-11-DrG">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Log Out" id="Nis-9V-Roj">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="kpp-kU-Xti"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.92999178169999996" green="0.37642610069999999" blue="0.6860898137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.99032181500000005" green="0.96343535179999995" blue="0.97981184720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8BH-uh-vyJ"/>
@@ -208,7 +214,7 @@
         <!--View Controller-->
         <scene sceneID="uhF-7k-UcR">
             <objects>
-                <viewController id="00n-PB-ltE" sceneMemberID="viewController">
+                <viewController id="00n-PB-ltE" customClass="ViewController" customModule="supergirlsCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgp-FT-z9s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +241,31 @@
                                 <state key="normal" title="LOG CLASSES">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="OhT-u4-sym" kind="show" id="Xml-9j-Wb7"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter End time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-W4-3VS">
+                                <rect key="frame" x="82" y="362" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Start time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-ki-BvL">
+                                <rect key="frame" x="82" y="283" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhE-bM-eEg">
+                                <rect key="frame" x="82" y="200" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Uy6-f8-Fk1"/>
@@ -243,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX1-qZ-YMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="112"/>
+            <point key="canvasLocation" x="2386.9565217391305" y="111.83035714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UTm-9g-EJz">
@@ -277,7 +307,7 @@
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wJn-Ry-sJO">
-                                <rect key="frame" x="87" y="177" width="240" height="684.5"/>
+                                <rect key="frame" x="20" y="177" width="374" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">01. Only 18% of computer science degrees are earned by women.
@@ -1230,8 +1260,9 @@ Codemonkey (http://www.playcodemonkey.com) is a free game that teaches coding by
     <inferredMetricsTieBreakers>
         <segue reference="c5S-k4-7m2"/>
         <segue reference="Cxh-ui-fMA"/>
-        <segue reference="TRn-sg-eqc"/>
+        <segue reference="71P-hH-NJh"/>
         <segue reference="Fi1-3z-0vB"/>
-        <segue reference="1LH-b3-toi"/>
+        <segue reference="E66-Rw-bpd"/>
+        <segue reference="kpp-kU-Xti"/>
     </inferredMetricsTieBreakers>
 </document>

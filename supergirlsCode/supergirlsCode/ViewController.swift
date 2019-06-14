@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    
+    
     var password = "sgc"
     @IBOutlet weak var textField: UITextField!
     
@@ -24,6 +27,11 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    
+    
+    
+    
 
     }
     
